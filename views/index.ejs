@@ -1,0 +1,25 @@
+</DOCTYPE HTMl>
+<html>
+    <head>
+        <title>The Best Joke Generator</title>
+    </head>
+    <body>
+        <h1>The Best Joke Generator</h1>
+        <p>Enter your name and pick a category to get your top tier joke.</p>
+        <form action="/joke" method="POST">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="category">Joke category</label>
+            <select id="category" name="category">
+                <option value="Any">Any</option>
+                <option value="Programming">Programming</option>
+                <option value="Pun">Pun</option>
+                <option value="Spooky">Spooky</option>
+                <option value="Christmas">Christmas</option>
+            </select>
+
+            <button type="submit">Get the joke</button>
+        </form>
+    </body>
+</html>
