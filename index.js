@@ -20,7 +20,10 @@ app.post("/joke", async function (req, res) {
       throw new Error("Not able to find a joke");
     }
 
-    res.send(`${name}, ${response.data.joke}`);
+    res.render("index", {
+        name: name,
+        joke: response.data.joke
+    });
   } catch (error) {
     res.status(502).send("Could not load a joke. try again");
   }

@@ -1,4 +1,4 @@
-</DOCTYPE HTMl>
+<!DOCTYPE html>
 <html>
     <head>
         <title>The Best Joke Generator</title>
@@ -21,5 +21,9 @@
 
             <button type="submit">Get the joke</button>
         </form>
+        <% if (typeof joke !== "undefined") { %>
+            <h2><%= name %>, here's your joke:</h2>
+            <p><%= joke %></p>
+        <% } %>
     </body>
 </html>
