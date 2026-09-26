@@ -21,9 +21,12 @@
 
             <button type="submit">Get the joke</button>
         </form>
-        <% if (typeof joke !== "undefined") { %>
+        <% if (typeof joke !== "undefined" && joke) { %>
             <h2><%= name %>, here's your joke:</h2>
             <p><%= joke %></p>
+        <% } %>
+        <% if (typeof error !== "undefined" && error) { %>
+            <p><%= error %></p>
         <% } %>
     </body>
 </html>

@@ -25,7 +25,10 @@ app.post("/joke", async function (req, res) {
         joke: response.data.joke
     });
   } catch (error) {
-    res.status(502).send("Could not load a joke. try again");
+    res.status(502).render("index", {
+        joke: null,
+        error: "Could not load a joke. try again"
+    });
   }
 });
 
