@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>The Best Joke Generator</title>
+        <link rel="stylesheet" href="/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>The Best Joke Generator</h1>
@@ -22,8 +24,10 @@
             <button type="submit">Get the joke</button>
         </form>
         <% if (typeof joke !== "undefined" && joke) { %>
+            <div class="jokeresult">
             <h2><%= name %>, here's your joke:</h2>
             <p><%= joke %></p>
+            </div>
         <% } %>
         <% if (typeof error !== "undefined" && error) { %>
             <p><%= error %></p>

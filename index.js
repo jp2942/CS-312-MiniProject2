@@ -3,6 +3,7 @@ const app = express();
 const axios = require("axios");
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static("public"));
 
 app.get("/", function (req, res) {
   res.render("index");

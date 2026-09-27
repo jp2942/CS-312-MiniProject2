@@ -1,0 +1,39 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: linear-gradient(to bottom, #ffffff, #a4caff);
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #373f48;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, button {
+  font: inherit;
+  padding: 10px;
+}
+
+button {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+form {
+  background: rgb(255, 255, 255);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.jokeresult {
+  background: rgb(253, 253, 253);
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
