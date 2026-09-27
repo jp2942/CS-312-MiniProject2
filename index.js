@@ -1,14 +1,16 @@
-const express = require("express");
-const app = express();
-const axios = require("axios");
-app.set("view engine", "ejs");
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static("public"));
+const express = require("express"); // Load Express
+const app = express(); // Create the Express app
+const axios = require("axios"); // Load Axios to make API requests
+app.set("view engine", "ejs"); // Use EJS to build the HTML pages
+app.use(express.urlencoded({ extended: false })); // Read submitted form data through req.body
+app.use(express.static("public")); // Make files in the public folder available to the browser
 
+// Show the form when someone visits the homepage
 app.get("/", function (req, res) {
   res.render("index");
 });
 
+// Get the user's choices, request a joke, and show the result or an error
 app.post("/joke", async function (req, res) {
   const name = req.body.name;
   const category = req.body.category;
@@ -33,6 +35,7 @@ app.post("/joke", async function (req, res) {
   }
 });
 
+// Start the website on port 3000
 app.listen(3000, function () {
   console.log("Server running at http://localhost:3000");
 });
